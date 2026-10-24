@@ -38,7 +38,7 @@ venue:
   type: "Working Group"
   mail: "oauth@ietf.org"
   github: "ThisIsMissEm/draft-oauth-authorization-management-uri"
-  latest: "https://drafts.thisismissem.social/draft-emelia-oauth-authorization-management-uri.html"
+  latest: "https://drafts.thisismissem.social/draft-emelia-oauth-authorization-management-uri/draft-emelia-oauth-authorization-management-uri.html"
 
 author:
  -
@@ -51,9 +51,6 @@ normative:
   RFC8414:
 
 informative:
-
-entity:
-  SELF: "[draft-emelia-oauth-authorization-management-uri-latest]"
 
 ...
 
