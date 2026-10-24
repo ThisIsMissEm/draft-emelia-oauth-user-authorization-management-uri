@@ -1,45 +1,50 @@
 name: "Archive Issues and Pull Requests"
 
 on:
-  schedule:
-    - cron: '0 0 * * 0,2,4'
+  # schedule:
+  #   - cron: '0 0 * * 0,2,4'
   repository_dispatch:
     types: [archive]
   workflow_dispatch:
     inputs:
       archive_full:
-        description: 'Recreate the archive from scratch'
+        description: "Recreate the archive from scratch"
         default: false
         type: boolean
+
+permissions: {}
 
 jobs:
   build:
     name: "Archive Issues and Pull Requests"
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       contents: write
+      issues: read
+      pull-requests: read
     steps:
-    - name: "Checkout"
-      uses: actions/checkout@v5
+      - name: "Checkout"
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-    # Note: No caching for this build!
+      # Note: No caching for this build!
 
-    - name: "Update Archive"
-      uses: martinthomson/i-d-template@v1
-      env:
-        ARCHIVE_FULL: ${{ inputs.archive_full }}
-      with:
-        make: archive
-        token: ${{ github.token }}
+      - name: "Update Archive"
+        uses: martinthomson/i-d-template@d2ce969b54014edf5671856b6866866c258bf8f5 # v1
+        env:
+          ARCHIVE_FULL: ${{ inputs.archive_full }}
+        with:
+          make: archive
+          token: ${{ github.token }}
 
-    - name: "Update GitHub Pages"
-      uses: martinthomson/i-d-template@v1
-      with:
-        make: gh-archive
-        token: ${{ github.token }}
+      - name: "Update GitHub Pages"
+        uses: martinthomson/i-d-template@d2ce969b54014edf5671856b6866866c258bf8f5 # v1
+        with:
+          make: gh-archive
+          token: ${{ github.token }}
 
-    - name: "Save Archive"
-      uses: actions/upload-artifact@v4
-      with:
-        name: archive
-        path: archive.json
+      - name: "Save Archive"
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: archive
+          path: archive.json
