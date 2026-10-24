@@ -1,6 +1,5 @@
 ---
 title: "OAuth User Authorization Management URI"
-abbrev: "OAuth UAM URI"
 category: std
 
 docname: draft-emelia-oauth-user-authorization-mgmt-uri-latest
