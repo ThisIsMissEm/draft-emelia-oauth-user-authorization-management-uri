@@ -1,9 +1,9 @@
 ---
 title: "OAuth Authorization Management URI"
-abbrev: "oauth-auth-management-uri"
+abbrev: "OAuth User Auth Management URI"
 category: std
 
-docname: draft-emelia-oauth-authorization-management-uri-latest
+docname: draft-emelia-oauth-user-authorization-management-uri-latest
 submissiontype: IETF
 number:
 date:
@@ -17,7 +17,7 @@ venue:
   group: "Web Authorization Protocol"
   type: "Working Group"
   mail: "oauth@ietf.org"
-  github: "ThisIsMissEm/draft-oauth-authorization-management-uri"
+  github: "ThisIsMissEm/draft-oauth-user-authorization-management-uri"
   latest: "https://drafts.thisismissem.social/draft-emelia-oauth-user-authorization-management-uri/draft-emelia-oauth-authorization-management-uri.html"
 
 author:
