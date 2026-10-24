@@ -4,10 +4,10 @@
 
 This is the working area for the individual Internet-Draft, "OAuth User Authorization Management URI".
 
-* [Editor's Copy](https://drafts.thisismissem.social/draft-emelia-oauth-user-authorization-management-uri/)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-emelia-oauth-user-authorization-management-uri)
-* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-emelia-oauth-user-authorization-management-uri)
-* [Compare Editor's Copy to Individual Draft](https://drafts.thisismissem.social/draft-emelia-oauth-user-authorization-management-uri/#go.draft-emelia-oauth-user-authorization-management-uri.diff)
+* [Editor's Copy](https://drafts.thisismissem.social/draft-emelia-oauth-user-authorization-mgmt-uri/)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-emelia-oauth-user-authorization-mgmt-uri)
+* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-emelia-oauth-user-authorization-mgmt-uri)
+* [Compare Editor's Copy to Individual Draft](https://drafts.thisismissem.social/draft-emelia-oauth-user-authorization-mgmt-uri/#go.draft-emelia-oauth-user-authorization-mgmt-uri.diff)
 
 This draft replaces
 [draft-emelia-oauth-authorization-management-uri](https://datatracker.ietf.org/doc/draft-emelia-oauth-authorization-management-uri),

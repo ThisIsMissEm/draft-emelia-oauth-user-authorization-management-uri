@@ -3,7 +3,7 @@ title: "OAuth User Authorization Management URI"
 abbrev: "OAuth UAM URI"
 category: std
 
-docname: draft-emelia-oauth-user-authorization-management-uri-latest
+docname: draft-emelia-oauth-user-authorization-mgmt-uri-latest
 submissiontype: IETF
 number:
 date:
@@ -17,8 +17,8 @@ venue:
   group: "Web Authorization Protocol"
   type: "Working Group"
   mail: "oauth@ietf.org"
-  github: "ThisIsMissEm/draft-emelia-oauth-user-authorization-management-uri"
-  latest: "https://drafts.thisismissem.social/draft-emelia-oauth-user-authorization-management-uri/draft-emelia-oauth-user-authorization-management-uri.html"
+  github: "ThisIsMissEm/draft-emelia-oauth-user-authorization-mgmt-uri"
+  latest: "https://drafts.thisismissem.social/draft-emelia-oauth-user-authorization-mgmt-uri/draft-emelia-oauth-user-authorization-mgmt-uri.html"
 
 author:
   - fullname: Emelia Smith
@@ -82,7 +82,7 @@ The following authorization server metadata value is defined by this specificati
 
 (This appendix to be deleted by the RFC editor in the final specification.)
 
-## draft-emelia-oauth-user-authorization-management-uri-00
+## draft-emelia-oauth-user-authorization-mgmt-uri-00
 {:numbered="false"}
 
 - Replaces draft-emelia-oauth-authorization-management-uri-00.
