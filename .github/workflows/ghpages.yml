@@ -14,22 +14,26 @@ on:
     - LICENSE.md
     - .gitignore
 
+permissions: {}
+
 jobs:
   build:
     name: "Update Editor's Copy"
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       contents: write
+      pull-requests: write
     steps:
     - name: "Checkout"
-      uses: actions/checkout@v5
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
     - name: "Setup"
       id: setup
       run: date -u "+date=%FT%T" >>"$GITHUB_OUTPUT"
 
     - name: "Caching"
-      uses: actions/cache@v4
+      uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
       with:
         path: |
           .refcache
@@ -41,19 +45,37 @@ jobs:
         restore-keys: i-d-
 
     - name: "Build Drafts"
-      uses: martinthomson/i-d-template@v1
+      id: build
+      uses: martinthomson/i-d-template@d2ce969b54014edf5671856b6866866c258bf8f5 # v1
+      with:
+        token: ${{ github.token }}
+
+    - name: "Fix Lints"
+      id: fix-lint
+      if: always() && steps.build.outcome == 'failure'
+      uses: martinthomson/i-d-template@d2ce969b54014edf5671856b6866866c258bf8f5 # v1
+      with:
+        make: fix-lint
+
+    - name: "Propose Linting Fixes"
+      if: >
+        always() &&
+        steps.fix-lint.outcome != 'skipped' &&
+        github.event.pull_request &&
+        github.event.pull_request.head.repo.full_name == github.repository
+      uses: parkerbxyz/suggest-changes@e24c62a5a3235e6090721c7b0355b825a3a4ba9a # v3.1.2
       with:
         token: ${{ github.token }}
 
     - name: "Update GitHub Pages"
-      uses: martinthomson/i-d-template@v1
+      uses: martinthomson/i-d-template@d2ce969b54014edf5671856b6866866c258bf8f5 # v1
       if: ${{ github.event_name == 'push' }}
       with:
         make: gh-pages
         token: ${{ github.token }}
 
     - name: "Archive Built Drafts"
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
       with:
         name: drafts
         path: |

@@ -18,18 +18,21 @@ name: "Update Generated Files"
 # the affected files.
 on: workflow_dispatch
 
+permissions: {}
+
 jobs:
   build:
     name: "Update Files"
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       contents: write
     steps:
     - name: "Checkout"
-      uses: actions/checkout@v5
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
     - name: "Update Generated Files"
-      uses: martinthomson/i-d-template@v1
+      uses: martinthomson/i-d-template@d2ce969b54014edf5671856b6866866c258bf8f5 # v1
       with:
         make: update-files
         token: ${{ github.token }}
