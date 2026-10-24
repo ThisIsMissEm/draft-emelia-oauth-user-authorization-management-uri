@@ -36,7 +36,7 @@ entity:
 
 --- abstract
 
-This specification defines a `authorization_management_uri` property for the OAuth Authorization Server Metadata ({{RFC8414}}), which allows an authorization server to specify a URI through which the user may manage the authorized clients that have access to their account.
+This specification defines a `user_authorization_management_uri` property for the OAuth Authorization Server Metadata ({{RFC8414}}), which allows an authorization server to specify a URI through which the user may manage the authorized clients that have access to their account.
 
 --- middle
 
@@ -44,7 +44,7 @@ This specification defines a `authorization_management_uri` property for the OAu
 
 An OAuth 2.0 [RFC6749] client may wish to provide access to a web-based UI at which a user can manage the applications authorized to access their account with the Authorization Server. This is a feature many Authorization Servers already support, however, when you don't have a primary service for the Authorization Server, there may be no clear path for a user to access this management page. This is especially true for decentralized social web applications where the mapping between Authorization Servers and Clients is many to many.
 
-This specification defines the new property of `authorization_management_uri` for the OAuth Authorization Server Metadata, as defined in [RFC8414]. This URI should point to a website at which the user can manage the authorizations that they have granted with their Authorization Server (for example, to revoke any client or active session, or review the security history of their account).
+This specification defines the new property of `user_authorization_management_uri` for the OAuth Authorization Server Metadata, as defined in [RFC8414]. This URI should point to a website at which the user can manage the authorizations that they have granted with their Authorization Server (for example, to revoke any client or active session, or review the security history of their account).
 
 # Conventions and Definitions
 
@@ -56,13 +56,13 @@ An Authorization Server may provide a user interface through which users can man
 
 This specification does not define specifics of the user interface, however, recommends that the user interface allows a user to manage their account security and authorized clients with the Authorization Server, for example, allowing them to see all authorized clients that have access to their account.
 
-To allow OAuth Clients to discover the URI of this user interface, this specification defines the new property `authorization_management_uri` for the OAuth Authorization Server Metadata, as defined in [RFC8414].
+To allow OAuth Clients to discover the URI of this user interface, this specification defines the new property `user_authorization_management_uri` for the OAuth Authorization Server Metadata, as defined in [RFC8414].
 
 # Security Considerations
 
 This specification does not define how the Authorization Server should secure the authorization management UI. Authorization Servers should take appropriate measures to ensure that the user is authenticated and authorized to view the authorization management UI.
 
-The OAuth Client MUST NOT open the `authorization_management_uri` in a webview or similar embedded browser, and instead delegate that to the users' default browser, such that the OAuth Client has no access to the account credentials or to other sensitive data.
+The OAuth Client MUST NOT open the `user_authorization_management_uri` in a webview or similar embedded browser, and instead delegate that to the users' default browser, such that the OAuth Client has no access to the account credentials or to other sensitive data.
 
 # IANA Considerations
 
@@ -70,7 +70,7 @@ The OAuth Client MUST NOT open the `authorization_management_uri` in a webview o
 
 The following authorization server metadata value is defined by this specification and registered in the IANA "OAuth Authorization Server Metadata" registry established in OAuth 2.0 Authorization Server Metadata [RFC8414].
 
-- Metadata Name: authorization_management_uri
+- Metadata Name: user_authorization_management_uri
 - Metadata Description: URI of the authorization management user interface provided by the Authorization Server.
 - Change Controller: IETF
 - Specification Document: {{&SELF}}
