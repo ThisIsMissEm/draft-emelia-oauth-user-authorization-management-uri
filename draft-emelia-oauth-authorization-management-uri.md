@@ -18,11 +18,10 @@ venue:
   type: "Working Group"
   mail: "oauth@ietf.org"
   github: "ThisIsMissEm/draft-oauth-authorization-management-uri"
-  latest: "https://drafts.thisismissem.social/draft-emelia-oauth-authorization-management-uri/draft-emelia-oauth-authorization-management-uri.html"
+  latest: "https://drafts.thisismissem.social/draft-emelia-oauth-user-authorization-management-uri/draft-emelia-oauth-authorization-management-uri.html"
 
 author:
- -
-    fullname: Emelia Smith
+  - fullname: Emelia Smith
     email: emelia@brandedcode.com
     uri: https://thisismissem.social
 
@@ -31,10 +30,10 @@ normative:
   RFC8414:
 
 informative:
-
 ...
+---
 
---- abstract
+abstract
 
 This specification defines a `authorization_management_uri` property for the OAuth Authorization Server Metadata ({{RFC8414}}), which allows an authorization server to specify a URI through which the user may manage the authorized clients that have access to their account.
 
@@ -64,16 +63,15 @@ This specification does not define how the Authorization Server should secure th
 
 The OAuth Client MUST NOT open the `authorization_management_uri` in a webview or similar embedded browser, and instead delegate that to the users' default browser, such that the OAuth Client has no access to the account credentials or to other sensitive data.
 
-
 # IANA Considerations
 
 ## OAuth Authorization Server Metadata Registry
 
 The following authorization server metadata value is defined by this specification and registered in the IANA "OAuth Authorization Server Metadata" registry established in OAuth 2.0 Authorization Server Metadata [RFC8414].
 
-* Metadata Name: authorization_management_uri
-* Metadata Description: URI of the authorization management user interface provided by the Authorization Server.
-* Change Controller: IETF
-* Specification Document: [draft-emelia-oauth-authorization-management-uri-latest]
+- Metadata Name: authorization_management_uri
+- Metadata Description: URI of the authorization management user interface provided by the Authorization Server.
+- Change Controller: IETF
+- Specification Document: [draft-emelia-oauth-authorization-management-uri-latest]
 
 --- back
