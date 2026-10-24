@@ -1,6 +1,6 @@
 ---
-title: "OAuth Authorization Management URI"
-abbrev: "OAuth User Auth Management URI"
+title: "OAuth User Authorization Management URI"
+abbrev: "OAuth UAM URI"
 category: std
 
 docname: draft-emelia-oauth-user-authorization-management-uri-latest
@@ -17,8 +17,8 @@ venue:
   group: "Web Authorization Protocol"
   type: "Working Group"
   mail: "oauth@ietf.org"
-  github: "ThisIsMissEm/draft-oauth-user-authorization-management-uri"
-  latest: "https://drafts.thisismissem.social/draft-emelia-oauth-user-authorization-management-uri/draft-emelia-oauth-authorization-management-uri.html"
+  github: "ThisIsMissEm/draft-emelia-oauth-user-authorization-management-uri"
+  latest: "https://drafts.thisismissem.social/draft-emelia-oauth-user-authorization-management-uri/draft-emelia-oauth-user-authorization-management-uri.html"
 
 author:
   - fullname: Emelia Smith
@@ -30,10 +30,11 @@ normative:
   RFC8414:
 
 informative:
-...
----
 
-abstract
+entity:
+  SELF: "This document"
+
+--- abstract
 
 This specification defines a `authorization_management_uri` property for the OAuth Authorization Server Metadata ({{RFC8414}}), which allows an authorization server to specify a URI through which the user may manage the authorized clients that have access to their account.
 
@@ -72,6 +73,6 @@ The following authorization server metadata value is defined by this specificati
 - Metadata Name: authorization_management_uri
 - Metadata Description: URI of the authorization management user interface provided by the Authorization Server.
 - Change Controller: IETF
-- Specification Document: [draft-emelia-oauth-authorization-management-uri-latest]
+- Specification Document: {{&SELF}}
 
 --- back
