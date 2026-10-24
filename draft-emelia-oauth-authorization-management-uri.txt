@@ -3,9 +3,9 @@
 
 
 Web Authorization Protocol                                      E. Smith
-Internet-Draft                                          17 November 2025
+Internet-Draft                                           24 October 2026
 Intended status: Standards Track                                        
-Expires: 21 May 2026
+Expires: 27 April 2027
 
 
                    OAuth Authorization Management URI
@@ -24,9 +24,10 @@ About This Document
 
    The latest revision of this draft can be found at
    https://drafts.thisismissem.social/draft-emelia-oauth-authorization-
-   management-uri.html.  Status information for this document may be
-   found at https://datatracker.ietf.org/doc/draft-emelia-oauth-
-   authorization-management-uri/.
+   management-uri/draft-emelia-oauth-authorization-management-uri.html.
+   Status information for this document may be found at
+   https://datatracker.ietf.org/doc/draft-emelia-oauth-authorization-
+   management-uri/.
 
    Discussion of this document takes place on the Web Authorization
    Protocol Working Group mailing list (mailto:oauth@ietf.org), which is
@@ -52,11 +53,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 May 2026.
+   This Internet-Draft will expire on 27 April 2027.
 
 Copyright Notice
 
-   Copyright (c) 2025 IETF Trust and the persons identified as the
+   Copyright (c) 2026 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
