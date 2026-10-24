@@ -76,3 +76,19 @@ The following authorization server metadata value is defined by this specificati
 - Specification Document: {{&SELF}}
 
 --- back
+
+# Document History
+{:numbered="false"}
+
+(This appendix to be deleted by the RFC editor in the final specification.)
+
+## draft-emelia-oauth-user-authorization-management-uri-00
+{:numbered="false"}
+
+- Renamed from draft-emelia-oauth-authorization-management-uri to draft-emelia-oauth-user-authorization-management-uri to clarify that this is about users managing their authorization grants at a given URI.
+- Renamed the authorization server metadata parameter from authorization_management_uri to user_authorization_management_uri.
+
+## draft-emelia-oauth-authorization-management-uri-00
+{:numbered="false"}
+
+- Initial draft.
