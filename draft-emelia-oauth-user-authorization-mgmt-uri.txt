@@ -3,9 +3,9 @@
 
 
 Web Authorization Protocol                                      E. Smith
-Internet-Draft                                           26 October 2026
+Internet-Draft                                           27 October 2026
 Intended status: Standards Track                                        
-Expires: 29 April 2027
+Expires: 30 April 2027
 
 
                 OAuth User Authorization Management URI
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 29 April 2027.
+   This Internet-Draft will expire on 30 April 2027.
 
 Copyright Notice
 
