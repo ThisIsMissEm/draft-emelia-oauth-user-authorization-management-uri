@@ -35,7 +35,7 @@ entity:
 
 --- abstract
 
-This specification defines a `user_authorization_management_uri` property for the OAuth Authorization Server Metadata ({{RFC8414}}), which allows an authorization server to specify a URI through which the user may manage the authorized clients that have access to their account.
+This specification defines a `user_authorization_management_uri` property for the OAuth Authorization Server Metadata (RFC8414), which allows an authorization server to specify a URI through which the user may manage the authorized clients that have access to their account.
 
 --- middle
 
